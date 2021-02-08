@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilark.css">
+    <title>Ask Menighetshus</title>
+</head>
+    <body>
+        <article>
+            <div>
+                <nav>
+                    <ul class="btn">
+                        <li class="left"><a href="utleie.html">Utleie og ordensregler</a></li>
+                        <li class="right"><a href="kontakt.html">Kontaktinformasjon og veibeskrivelse</a></li>
+                    </ul>
+                </nav>
+                <h1>Ask menighetshus</h1>
+                    <p class="content">
+                        Historikk
+                        <br>Ask kirke stod ferdig i 1908, til stor glede for bygdefolket. Men det viste seg snart at en hadde behov for et forsamlingshus. 
+                        Lag og organisasjoner ønsket et tjenlig «bedehus» i tillegg til kirken. Høytidelig ble det bestemt at navnet skulle være: Ask menighetshus. 
+                        19 år etter ble huset reist og innviet 1. januar 1939. 
+                        Huset ble flittig benyttet til vanlige møter, basarer, utleid til sangkor, barnekontroller i kommunal regi, klasserom og selvsagt til barne- og ungdomsarbeid. 
+                        I 1978 ble huset kraftig rustet opp med nybygg og sanitærfasiliteter. I mangel på barnehageplasser ble det etablert en korttidsbarnehage, senere langtidsbarnehage i huset.  
+                        Denne eksisterte i ca. 30 år. 
+                        <br>
+                        Etter år 2000 er huset blitt påbygget flere ganger og rehabilitert til et moderne og lettdrevet anlegg. 
+                        Særlig var det nye «storkjøkkenet» i 2014, en stor nyvinning. 
+                    </p>  
+                    
+                    <h4>Huset</h4>
+                    <!-- Slideshow container -->
+                    <div class="container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 7</div>
+                            <img src="bilder/ute1.jpg" style="width:100%" height="585px">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 7</div>
+                            <img src="bilder/Ute2.jpg" style="width:100%" height="585px">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 7</div>
+                            <img src="bilder/kjøkken.jpg" style="width:100%" height="585px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 7</div>
+                            <img src="bilder/bord.jpg" style="width:100%" height="585px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 7</div>
+                            <img src="bilder/bord2.jpg" style="width:100%" height="585px">
+                        </div>
+
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">6 / 7</div>
+                            <img src="bilder/bord3.jpg" style="width:100%" height="585px">
+                        </div>
+
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">7 / 7</div>
+                            <img src="bilder/bord4.jpg" style="width:100%" height="585px">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <!--Image text-->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <!--Thumbnail images-->
+                        <div class="row">
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/ute1.jpg" style="width:100%" height="85px" onclick="currentSlide(1)" alt="Utenfor">
+                            </div>
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/Ute2.jpg" style="width:100%" height="85px" onclick="currentSlide(2)" alt="Utenfor">
+                            </div>
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/kjøkken.jpg" style="width:100%" height="85px" onclick="currentSlide(3)" alt="Kjøkkenet">
+                            </div>
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/bord.jpg" style="width:100%" height="85px" onclick="currentSlide(4)" alt="Bordene">
+                            </div>
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/bord2.jpg" style="width:100%" height="85px" onclick="currentSlide(5)" alt="Bordene">
+                            </div>
+                            <div class="column">
+                            <img class="demo cursor" src="bilder/bord3.jpg" style="width:100%" height="85px" onclick="currentSlide(6)" alt="Bordene">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="bilder/bord4.jpg" style="width:100%" height="85px" onclick="currentSlide(7)" alt="Bordene">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+
+                        function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                        }
+
+                        function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                        }
+
+                        function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("demo");
+                        var captionText = document.getElementById("caption");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                    </script>
+                </div>
+            </div>
+
+        </article>
+        
+    </body>
+</html>

@@ -23,12 +23,12 @@ a {
   color: blue;
 }
 
-/*.content {
+.content {
   display: block;
-  border: 4px solid rgb(74, 78, 78);
+  /*border: 4px solid rgb(74, 78, 78);*/
   border-radius: 6px;
-  background-color: rgb(248, 239, 239);
-}*/
+  /*background-color: rgb(248, 239, 239);*/
+}
 
 .left {
   background-image: linear-gradient(to right, rgb(184, 203, 209), rgb(206, 197, 158));
